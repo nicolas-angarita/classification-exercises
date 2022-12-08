@@ -22,7 +22,7 @@ def get_titanic_data():
 
         df = pd.read_sql(query, url)
         
-        df.to_csv('titanic.csv')
+        df.to_csv('titanic.csv', index = False)
 
         return df  
 
@@ -46,7 +46,7 @@ def get_iris_data():
 
         df = pd.read_sql(query, url)
         
-        df.to_csv('iris_df.csv')
+        df.to_csv('iris_df.csv', index = False)
 
         return df   
 
@@ -71,6 +71,6 @@ def get_telco_data():
 
         df = pd.read_sql(query, url)
         
-        df.to_csv('telco.csv')
+        df.to_csv('telco.csv', index = False)
 
         return df                
