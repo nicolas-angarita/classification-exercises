@@ -63,8 +63,8 @@ def prep_telco(telco_df):
 def train_val_test(df,col):
     seed = 42
     
-    train,val_test = train_test_split(df, train_size = 0.7, random_state = seed, stratify = df[col])
+    train, test = train_test_split(df, train_size = 0.7, random_state = seed, stratify = df[col])
     
-    validate, test = train_test_split(val_test, train_size = 0.5, random_state = seed, stratify = val_test[col])
+    validate, test = train_test_split(train, train_size = 0.5, random_state = seed, stratify = train[col])
     
     return train, validate, test
