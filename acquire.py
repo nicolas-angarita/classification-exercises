@@ -7,6 +7,11 @@ from env import get_connection
 
 def get_titanic_data():
 
+    '''
+    This function is to get the titantic dataset from a local csv file or from SQL Ace to our working notebook to be able to
+    use the data and perform various tasks using the data
+    ''' 
+    
     if os.path.isfile('titanic.csv'):
         
         return pd.read_csv('titanic.csv')
@@ -28,9 +33,12 @@ def get_titanic_data():
 
 
 def get_iris_data():
-
+    '''
+     This function is to get the iris dataset either from a local csv file or from SQL Ace to our working notebook to be able
+     to use the data and perform various tasks using the data
+    '''
     if os.path.isfile('iris_df.csv'):
-        
+
         return pd.read_csv('iris_df.csv')
     
     else:
@@ -52,7 +60,10 @@ def get_iris_data():
 
 
 def get_telco_data():
-
+    '''
+    This function is to get the telco dataset either from a local csv file or from SQL Ace to our working notebook to be able
+    to use the data and perform various tasks using the data
+    '''
     if os.path.isfile('telco.csv'):
         
         return pd.read_csv('telco.csv')
