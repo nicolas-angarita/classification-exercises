@@ -27,7 +27,7 @@ def prep_titantic(titanic_df):
     and we put our dataset into the function, then get a cleaned verison of the dataset'''
     
     
-    titanic_df = titanic_df.drop(columns=['passenger_id','embarked','class', 'age','deck'])
+    titanic_df = titanic_df.drop(columns=['passenger_id','embarked','class', 'age', 'deck'])
     
     titanic_df['embark_town'].fillna('Southampton', inplace = True)
     
